@@ -1,8 +1,15 @@
-import "./Modal.scss"
-import { Component, useEffect } from "react";
+import "./Modal.scss";
+import React,{ useEffect } from "react";
 import PropTypes from "prop-types";
 
-export function Modal({ closeModal, imgUrlModal, tagModal }) {
+interface ModalProps {
+    closeModal: () => void;
+    imgUrlModal: string;
+    tagModal: string;
+}
+
+// Komponent Modal w TypeScript
+export function Modal({ closeModal, imgUrlModal, tagModal }: ModalProps) {
 
     useEffect(() => {
         window.addEventListener('keydown', handleEsc);
@@ -12,14 +19,14 @@ export function Modal({ closeModal, imgUrlModal, tagModal }) {
         };
     }, []);
 
-    const handleEsc = (event) => {
-        if (event.keyCode === 27) {
+    const handleEsc = (event: KeyboardEvent) => {
+        if (event.key === "Escape") {
             closeModal();
         }
     };
 
-    const handleClickOutside = (event) => {
-        if (event.target === event.currentTarget || event.keyCode === 27) {
+    const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
+        if (event.target === event.currentTarget) {
             closeModal();
         }
     };
@@ -34,7 +41,7 @@ export function Modal({ closeModal, imgUrlModal, tagModal }) {
 }
 
 Modal.propTypes = {
+    closeModal: PropTypes.func.isRequired,
     imgUrlModal: PropTypes.string.isRequired,
     tagModal: PropTypes.string.isRequired,
-    closeModal: PropTypes.func.isRequired,
 };

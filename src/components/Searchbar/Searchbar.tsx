@@ -1,17 +1,21 @@
 import "./Searchbar.scss"
-import { Component, useRef, useState, } from "react";
+import React,{ useState, ChangeEvent, MouseEvent } from "react";
 import PropTypes from "prop-types";
 import icon from "../../Images/icons.svg";
 
-export function Searchbar({ handleSearch }) {
-    const [query, setQuery] = useState("");
+interface SearchbarProps {
+    handleSearch: (query: string) => void;
+}
 
-    const clickButtonSearch = (event) => {
+export function Searchbar({ handleSearch }: SearchbarProps) {
+    const [query, setQuery] = useState<string>("");
+
+    const clickButtonSearch = (event: MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         handleSearch(query);
     };
 
-    const handleInputSearchChange = (event) => {
+    const handleInputSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
         setQuery(event.currentTarget.value);
     };
 

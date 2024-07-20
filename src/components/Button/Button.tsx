@@ -1,8 +1,14 @@
 import "./Button.scss"
-import { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-export function Button({ handlePagination, totalPages, currentPage }) {
+interface ButtonProps {
+    handlePagination: () => void;
+    totalPages: number;
+    currentPage: number;
+}
+
+export const Button: React.FC<ButtonProps> = ({ handlePagination, totalPages, currentPage }) => {
     const handlePaginationButton = () => {
         handlePagination();
     };
@@ -16,5 +22,6 @@ export function Button({ handlePagination, totalPages, currentPage }) {
 
 Button.propTypes = {
     handlePagination: PropTypes.func.isRequired,
-
+    totalPages: PropTypes.number.isRequired,
+    currentPage: PropTypes.number.isRequired,
 };

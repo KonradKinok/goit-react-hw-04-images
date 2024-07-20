@@ -1,16 +1,20 @@
-import "./ImageGalleryItem.scss"
-import { Component } from "react";
+import "./ImageGalleryItem.scss";
+import React from "react";
 import PropTypes from "prop-types";
 
-export function ImageGalleryItem({ tags, webformatURL, openModal }) {
+interface ImageGalleryItemProps {
+    tags: string;
+    webformatURL: string;
+    openModal: () => void;
+}
 
+export const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({ tags, webformatURL, openModal }) => {
     return (
         <li className="ImageGalleryItem" onClick={openModal}>
             <img className="ImageGalleryItem-image" src={webformatURL} alt={tags} />
         </li>
-    )
-
-}
+    );
+};
 
 ImageGalleryItem.propTypes = {
     tags: PropTypes.string.isRequired,
