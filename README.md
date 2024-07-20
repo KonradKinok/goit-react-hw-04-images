@@ -1,10 +1,10 @@
 # goit-react-hw-03-phonebook
 
 Link do repozytorium:
-https://github.com/KonradKinok/goit-react-hw-03-image-finder
+https://github.com/KonradKinok/goit-react-hw-04-images
 
 Link do strony:
-https://konradkinok.github.io/goit-react-hw-03-image-finder/
+https://konradkinok.github.io/goit-react-hw-04-images/
 
 # React + Vite
 
