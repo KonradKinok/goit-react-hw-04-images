@@ -24,10 +24,10 @@ export function Searchbar({ handleSearch }: SearchbarProps) {
         <header className="searchbar">
             <form className="searchForm">
                 <button type="submit" className="searchForm-button" onClick={clickButtonSearch}>
-                    <svg className="" width="16" height="16">
-                        {/* <use href={`${icon}#icon-search`} /> */}
-                        <IconSearch/>
-                    </svg>
+                     <IconSearch/>
+                    {/* <svg className="" width="16" height="16">
+                        <use href={`${icon}#icon-search`} />
+                    </svg> */}
                 </button>
                 <input
                     className="searchForm-input"
