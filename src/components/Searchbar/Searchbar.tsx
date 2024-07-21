@@ -2,7 +2,7 @@ import "./Searchbar.scss"
 import React,{ useState, ChangeEvent, MouseEvent } from "react";
 import PropTypes from "prop-types";
 import { IconSearch } from "../Icons/Icons";
-
+import icon from "/icons.svg";
 interface SearchbarProps {
     handleSearch: (query: string) => void;
 }
@@ -23,10 +23,10 @@ export function Searchbar({ handleSearch }: SearchbarProps) {
         <header className="searchbar">
             <form className="searchForm">
                 <button type="submit" className="searchForm-button" onClick={clickButtonSearch}>
-                     <IconSearch/>
-                    {/* <svg className="" width="16" height="16">
+                     {/* <IconSearch/> */}
+                    <svg className="" width="16" height="16">
                         <use href={`${icon}#icon-search`} />
-                    </svg> */}
+                    </svg>
                 </button>
                 <input
                     className="searchForm-input"
