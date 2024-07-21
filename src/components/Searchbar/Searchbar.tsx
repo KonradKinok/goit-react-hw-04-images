@@ -24,7 +24,7 @@ export function Searchbar({ handleSearch }: SearchbarProps) {
             <form className="searchForm">
                 <button type="submit" className="searchForm-button" onClick={clickButtonSearch}>
                     <svg className="" width="16" height="16">
-                        <use xlinkHref={`${icon}#icon-search`} />
+                        <use href={`${icon}#icon-search`} />
                     </svg>
                 </button>
                 <input
