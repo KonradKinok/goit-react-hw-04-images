@@ -1,8 +1,8 @@
 import "./Searchbar.scss"
 import React,{ useState, ChangeEvent, MouseEvent } from "react";
 import PropTypes from "prop-types";
-import { IconSearch } from "../Icons/Icons";
 import icon from "/icons.svg";
+
 interface SearchbarProps {
     handleSearch: (query: string) => void;
 }
