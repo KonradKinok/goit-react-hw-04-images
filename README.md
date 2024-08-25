@@ -1,4 +1,4 @@
-# goit-react-hw-03-phonebook
+# goit-react-hw-04-phonebook
 
 Link do repozytorium:
 https://github.com/KonradKinok/goit-react-hw-04-images
